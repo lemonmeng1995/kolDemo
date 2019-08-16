@@ -16,12 +16,16 @@ const Order = r => require.ensure([], () => r(require('../pages/order/Order')), 
 const User = r => require.ensure([], () => r(require('../pages/user/User')), 'index')
 const Home = r => require.ensure([], () => r(require('../pages/index')), 'index')
 const StoreAuth = r => require.ensure([], () => r(require('../components/StoreAuth')), 'index')
-
+const Information  = r => require.ensure([], () => r(require('../components/Information')), 'index')
+const Wealthcenter =  r => require.ensure([], () => r(require('../components/Wealthcenter')), 'index')
+const Discountrecord =  r => require.ensure([], () => r(require('../components/Discountrecord')), 'index')
+const Invitedpeople =  r => require.ensure([], () => r(require('../components/Invitedpeople')), 'index')
+const Goodsdetails = r => require.ensure([], () => r(require('../pages/home/Goodsdetails')), 'index')
 const router= new Router({
   routes: [
     {
       path: '/',
-      redirect: '/order',
+      redirect: '/user',
     },
     //首页
     {
@@ -92,6 +96,57 @@ const router= new Router({
         title: '店铺授权'
       }
     },
+    //完善资质信息
+    {
+      path: '/information',
+      name: 'Information',
+      component: Information,
+      meta: {
+        isLogin: false,
+        title: '完善资质信息'
+      }
+    },
+    //财富中心
+    {
+      path: '/wealthcenter',
+      name: 'Wealthcenter',
+      component: Wealthcenter,
+      meta: {
+        isLogin: false,
+        title: '财富中心'
+      }
+
+    },
+    //提现记录
+    {
+      path: '/discountrecord',
+      name: 'Discountrecord',
+      component: Discountrecord,
+      meta: {
+        isLogin: false,
+        title: '提现记录'
+      }
+    },
+     // 邀请的供应商//网红
+     {
+      path: '/invitedpeople',
+      name: 'Invitedpeople',
+      component: Invitedpeople,
+      meta: {
+        isLogin: false,
+        title: '邀请的供应商'
+      }
+    },
+    // 商品详情
+    {
+      path: '/goodsdetails',
+      name: 'Goodsdetails',
+      component: Goodsdetails,
+      meta: {
+        isLogin: false,
+        title: '商品详情'
+      }
+    }
    
   ],
   mode:"history"

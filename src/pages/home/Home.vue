@@ -93,7 +93,7 @@
       <span>- 公开商品 -</span>
     </div>
     <div class="listofgoods">  
-      <div class="goodsconnect">
+      <div class="goodsconnect" @click="goGoodsdetails"> 
          <div class="connect-left">
           tup 
         </div>
@@ -152,8 +152,7 @@
             </div>
           </div>
         </div>
-      </div>  
-       
+      </div>   
     </div>
   </div>
 </template>
@@ -185,6 +184,10 @@ export default {
   methods:{
     goStoreauth(){
       this.$router.push('/storeAuth');
+    },
+    goGoodsdetails(){
+      this.$router.push('/goodsdetails');
+
     }
   }
 };
@@ -366,6 +369,8 @@ export default {
     // width:710px;
     height:375px;
     margin-top:40px;
+    margin-left:15px;
+    margin-right:15px;
     background:rgba(255,248,222,1);
     border-radius:20px;
     .goodstext{
@@ -513,9 +518,9 @@ export default {
     }
   }
   .listofgoods{
-    padding:15px;
+    padding:20px;
     background-color: #f5f5f5;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
     .goodsconnect{
         display: flex;
         margin-bottom:20px;

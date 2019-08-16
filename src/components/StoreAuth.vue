@@ -38,10 +38,11 @@ export default {
 <style lang="scss" scoped>
 #storeauth {
   background: rgba(243, 243, 243, 1);
+  position:fixed;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 1000px;
+  height:100%;
   .storeheader {
     padding: 20px;
     span {
@@ -84,11 +85,14 @@ export default {
     text-align: center;
     position: fixed;
     bottom: 100px;
+    width:100%;
+    
     .btn {
       width: 690px;
       height: 88px;
       text-align: center;
       line-height: 88px;
+      margin:0 auto;
       background: linear-gradient(
         90deg,
         rgba(240, 15, 129, 1),
