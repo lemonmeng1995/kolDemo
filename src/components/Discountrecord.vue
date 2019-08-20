@@ -70,7 +70,6 @@ export default {
 
 <style lang="scss" scoped>
 #discountrecord {
-  position: fixed;
   background: #f3f3f3;
   width: 100%;
   height: 100%;

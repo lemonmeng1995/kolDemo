@@ -180,6 +180,7 @@ export default {
         height: 88px;
         text-align: center;
         line-height: 88px;
+        margin:0 auto;
         background: linear-gradient(
           90deg,
           rgba(240, 15, 129, 1),

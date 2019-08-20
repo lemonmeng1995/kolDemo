@@ -21,6 +21,11 @@ const Wealthcenter =  r => require.ensure([], () => r(require('../components/Wea
 const Discountrecord =  r => require.ensure([], () => r(require('../components/Discountrecord')), 'index')
 const Invitedpeople =  r => require.ensure([], () => r(require('../components/Invitedpeople')), 'index')
 const Goodsdetails = r => require.ensure([], () => r(require('../pages/home/Goodsdetails')), 'index')
+const Myselection = r => require.ensure([], () => r(require('../components/myselection/index')), 'index')
+const Oneclickshop = r => require.ensure([], () => r(require('../components/oneclickshop/index')), 'index')
+const EditorPrice = r => require.ensure([], () => r(require('../components/myselection/editorPrice')), 'index')
+
+const Addmaterial = r => require.ensure([], () => r(require('../components/myselection/addmaterial')), 'index')
 const router= new Router({
   routes: [
     {
@@ -146,7 +151,47 @@ const router= new Router({
         isLogin: false,
         title: '商品详情'
       }
+    },
+    // 我的选品
+    {
+    path: '/myselection',
+    name: 'Myselection',
+    component: Myselection,
+    meta: {
+      isLogin: false,
+      title: '雀信'
     }
+  },
+     // 一键铺货
+     {
+      path: '/oneclickshop',
+      name: 'Oneclickshop',
+      component: Oneclickshop,
+      meta: {
+        isLogin: false,
+        title: '雀信'
+      }
+    },
+     // 编辑售价
+     {
+      path: '/editorPrice',
+      name: 'EditorPrice',
+      component: EditorPrice,
+      meta: {
+        isLogin: false,
+        title: '雀信'
+      }
+    },
+       // 编辑增加素材
+       {
+        path: '/addmaterial',
+        name: 'Addmaterial',
+        component: Addmaterial,
+        meta: {
+          isLogin: false,
+          title: '雀信'
+        }
+      }
    
   ],
   mode:"history"
